@@ -23,7 +23,7 @@ let Letter = function(letter) {
         return display
     }
     this.check = function (guess) {
-        if (guess === this.letter) {
+        if (guess.toLowerCase() === this.letter.toLowerCase()) {
             this.letterGuessed = true
         }
     }
