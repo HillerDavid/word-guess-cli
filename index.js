@@ -17,9 +17,8 @@ function start() {
     chosenWord = wordsToGuess[Math.floor(Math.random() * wordsToGuess.length)]
     roundWord = new Word(chosenWord)
     roundWord.createWord()
-    console.log(roundWord.newWord)
     guessesRemaining = 5
-    console.log(`Terminal connected.`)
+    console.log(`\n\rTerminal connected.`)
     displayGuessesRemaining()
     game()
 }
@@ -38,7 +37,7 @@ function game() {
             })
     } else {
         console.log(`Out of guesses.`)
-        console.log(`The correct answer was ${chosenWord}.`)
+        console.log(`The word was ${chosenWord}.`)
         reset()
     }
 }
@@ -50,12 +49,12 @@ function checkAnswer(answer) {
         roundWord.letterCheck(answer.userGuess)
         if (currentWord === roundWord.displayWord()) {
             guessesRemaining--
-            console.log(`The letter ${answer.userGuess} does not exist in the word!`)
+            console.log(`\n\rThe letter ${answer.userGuess} does not exist in the word!`)
             displayGuessesRemaining()
             game()
         }
         else {
-            console.log(`${answer.userGuess} is in the word!`)
+            console.log(`\n\r${answer.userGuess} is in the word!`)
             if (roundWord.displayWord() === chosenWord) {
                 console.log(`Success.`)
                 console.log(`The word is ${chosenWord}.`)
