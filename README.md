@@ -24,7 +24,6 @@ CLI word guess game with words from the Fallout video game series.
 
 ### Launch game
 
--```node index.js```
 ![Starting-Point](gifs/start.gif)
 
 ### Guess a single letter
